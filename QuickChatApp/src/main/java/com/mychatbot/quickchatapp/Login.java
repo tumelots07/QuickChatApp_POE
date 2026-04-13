@@ -21,4 +21,10 @@ public class Login {
 
         return length && capital && number && special;
     }
+    
+    // Regex reference: https://stackoverflow.com/
+    public boolean checkCellPhoneNumber(String phoneNumber) {
+    // Must start with +27 and be followed by 9 digits
+    return phoneNumber.matches("^\\+27[0-9]{9}$");
+    }
 }
