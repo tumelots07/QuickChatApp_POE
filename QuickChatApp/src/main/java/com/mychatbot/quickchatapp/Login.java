@@ -1,6 +1,8 @@
 package com.mychatbot.quickchatapp;
 
 public class Login {
+    private String storedUsername;
+    private String storedPassword;
 
     public boolean checkUserName(String username) {
         return username.contains("_") && username.length() <= 5;
@@ -38,6 +40,23 @@ public class Login {
         return "Password is not correctly formatted; please ensure that the password contains at least eight characters, a capital letter, a number, and a special character.";
     }
 
-    return "Username and password successfully captured.";
+    // STORE credentials after successful validation
+    storedUsername = username;
+    storedPassword = password;
+
+    return "User successfully registered.";
+    }
+    
+    public boolean loginUser(String username, String password) {
+    return username.equals(storedUsername) && password.equals(storedPassword);
+    }
+    
+    public String returnLoginStatus(boolean isLoggedIn, String username) {
+
+    if (isLoggedIn) {
+        return "Welcome " + username + ", it is great to see you again.";
+    } else {
+        return "Username or password incorrect, please try again.";
+    }
     }
 }
