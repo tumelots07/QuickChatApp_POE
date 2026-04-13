@@ -18,7 +18,14 @@ public class QuickChatApp {
         System.out.print("Enter password: ");
         String password = input.nextLine();
 
-        System.out.println(login.registerUser(username, password));
+        String registerResult = login.registerUser(username, password);
+        System.out.println(registerResult);
+
+        // STOP IF REGISTRATION FAILS
+        if (!registerResult.equals("User successfully registered.")) {
+            System.out.println("Cannot proceed to login.");
+            return;
+        }
 
         // LOGIN
         System.out.println("\n=== LOGIN ===");
