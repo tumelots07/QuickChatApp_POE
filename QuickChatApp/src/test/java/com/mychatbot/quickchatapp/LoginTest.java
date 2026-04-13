@@ -1,6 +1,5 @@
 package com.mychatbot.quickchatapp;
 
-import com.mychatbot.quickchatapp.Login;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -29,14 +28,26 @@ public class LoginTest {
     }
 
     @Test
-    public void testValidLogin() {
-        login.registerUser("kyl_1", "Ch&&sec@ke99!");
-        assertTrue(login.loginUser("kyl_1", "Ch&&sec@ke99!"));
+    public void testValidCell() {
+        assertTrue(login.checkCellPhoneNumber("+27838968976"));
     }
 
     @Test
-    public void testInvalidLogin() {
-        login.registerUser("kyl_1", "Ch&&sec@ke99!");
-        assertFalse(login.loginUser("wrong", "wrong"));
+    public void testInvalidCell() {
+        assertFalse(login.checkCellPhoneNumber("08966553"));
+    }
+
+    @Test
+    public void testRegisterSuccess() {
+        assertEquals(
+            "User successfully registered.",
+            login.registerUser("Tumelo", "Mohuba", "tum_7", "SDmalome2$", "+27838968976")
+        );
+    }
+
+    @Test
+    public void testLoginSuccess() {
+        login.registerUser("Tumelo", "Mohuba", "tum_7", "SDmalome2$", "+27838968976");
+        assertTrue(login.loginUser("tum_7", "SDmalome2$"));
     }
 }

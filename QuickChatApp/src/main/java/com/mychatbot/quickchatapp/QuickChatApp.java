@@ -12,13 +12,22 @@ public class QuickChatApp {
         System.out.println("===== QUICKCHAT APP =====");
 
         // REGISTER
+        System.out.print("Enter first name: ");
+        String firstName = input.nextLine();
+
+        System.out.print("Enter last name: ");
+        String lastName = input.nextLine();
+
         System.out.print("Enter username: ");
         String username = input.nextLine();
 
         System.out.print("Enter password: ");
         String password = input.nextLine();
 
-        String registerResult = login.registerUser(username, password);
+        System.out.print("Enter cell phone number (+27...): ");
+        String cell = input.nextLine();
+
+        String registerResult = login.registerUser(firstName, lastName, username, password, cell);
         System.out.println(registerResult);
 
         // STOP IF REGISTRATION FAILS
@@ -38,6 +47,6 @@ public class QuickChatApp {
 
         boolean loggedIn = login.loginUser(loginUser, loginPass);
 
-        System.out.println(login.returnLoginStatus(loggedIn, loginUser));
+        System.out.println(login.returnLoginStatus());
     }
 }
