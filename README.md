@@ -76,3 +76,84 @@ Developed using Java OOP principles and test-driven development.
 - Unit tests ensure correctness of core functionality.
 
 ---
+
+---
+
+# 📨 Part 2 — Sending Messages
+
+## Features Added
+
+### Welcome Menu
+After successful login, the application displays:
+
+- Welcome to QuickChat
+
+The user can then choose from the following options:
+1. Send Messages
+2. Show recently sent messages
+3. Quit
+
+---
+
+## Message Functionality
+
+Users can:
+- Enter how many messages they would like to send
+- Send messages
+- Disregard messages
+- Store messages for later
+
+---
+
+## Message Validation
+
+### Recipient Validation
+Recipient numbers must:
+- Include the international code (+27)
+- Follow the correct South African cell number format
+
+### Message Length Validation
+Messages may not exceed 250 characters.
+
+If the message exceeds the limit, the application displays:
+- "Message exceeds 250 characters by X"
+
+---
+
+## Message Hash
+
+The system automatically generates a message hash using:
+- First 2 digits of Message ID
+- Message number
+- First and last words of the message
+
+Example:
+00:0:HITONIGHT
+
+---
+
+## JSON Storage
+Messages selected for storage are saved into a JSON file:
+- storedMessages.json
+
+---
+
+## Unit Testing
+JUnit tests were added for:
+- Message length validation
+- Recipient validation
+- Message hash creation
+- Message sending options
+- Message ID generation
+
+---
+
+## Concepts Demonstrated
+- Loops
+- Arrays
+- String manipulation
+- File handling
+- OOP principles
+- Validation logic
+- Unit testing
+- Git branching workflow
