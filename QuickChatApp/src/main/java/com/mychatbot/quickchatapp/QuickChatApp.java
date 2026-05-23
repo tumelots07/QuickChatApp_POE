@@ -109,7 +109,7 @@ public class QuickChatApp {
                         break;
 
                     case 3:
-                        System.out.println("Total messages entered: " + messageCounter);
+                        System.out.println("Total messages sent: " + messageCounter);
                         System.out.println("Goodbye.");
                         break;
 
