@@ -197,6 +197,30 @@ public class MessageManager {
     // =========================
     public String displayReport() {
 
+    if (sentMessages.isEmpty()) {
+        return "No sent messages.";
+    }
+
+    StringBuilder report = new StringBuilder();
+
+    for (Message msg : sentMessages) {
+
+        report.append("Message Number: ")
+              .append(msg.getMessageNumber())
+              .append("\nMessage Hash: ")
+              .append(msg.getMessageHash())
+              .append("\nRecipient: ")
+              .append(msg.getRecipient())
+              .append("\nMessage: ")
+              .append(msg.getMessageText())
+              .append("\n\n");
+    }
+
+    return report.toString();
+}
+    
+    public String displayStoredReport() {
+
     if (storedMessages.isEmpty()) {
         return "No stored messages.";
     }

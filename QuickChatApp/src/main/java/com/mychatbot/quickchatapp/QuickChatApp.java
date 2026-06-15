@@ -299,10 +299,10 @@ public class QuickChatApp {
                         // f. Display report
                         case 6:
 
-                            System.out.println(
-                                    manager.displayReport());
+    System.out.println(
+            manager.displayStoredReport());
 
-                            break;
+    break;
 
                         default:
 
