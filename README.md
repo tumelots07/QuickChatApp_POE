@@ -1,159 +1,314 @@
 # QuickChatApp_POE
-Chat application Part 1 - Registration and Login
-## 📌 Project Overview
-This project is a console-based Java chat application developed as part of a Programming POE assignment. It demonstrates object-oriented programming, input validation, and unit testing using JUnit 5.
+
+Console-based Java chat application developed for a Programming POE assignment. The project demonstrates object-oriented programming, arrays, file handling, validation, and automated unit testing using JUnit 5 and GitHub Actions.
 
 ---
 
-## 🚀 Features Implemented
+# 📌 Project Overview
 
-### 1. User Registration
-Users are required to register using:
-- First Name
-- Last Name
-- Username
-- Password
-- South African Cell Phone Number
-
-### Validation Rules:
-- Username must contain an underscore (_) and be no more than 5 characters long.
-- Password must be at least 8 characters long and include:
-  - A capital letter
-  - A number
-  - A special character
-- Cell phone number must include international code (+27) and be correctly formatted.
+QuickChatApp allows users to register, log in, send messages, store messages, search messages, and generate reports. The application follows OOP principles and uses unit testing to ensure functionality.
 
 ---
 
-### 2. Login System
-- Users can log in using their registered username and password.
-- Successful login displays a personalized welcome message:
-  "Welcome <First Name>, <Last Name> it is great to see you again."
+# 🚀 Features Implemented
+
+## Part 1 – Registration and Login
+
+### User Registration
+
+Users register using:
+
+* First Name
+* Last Name
+* Username
+* Password
+* South African Cell Phone Number
+
+### Validation Rules
+
+#### Username
+
+Must:
+
+* Contain an underscore (_)
+* Be no more than 5 characters long
+
+#### Password
+
+Must:
+
+* Be at least 8 characters long
+* Contain a capital letter
+* Contain a number
+* Contain a special character
+
+#### Cell Phone Number
+
+Must:
+
+* Include the international code (+27)
+* Follow the South African number format
 
 ---
 
-### 3. Unit Testing (JUnit 5)
-The project includes automated unit tests for:
-- Username validation
-- Password complexity
-- Cell phone number validation
-- Registration process
-- Login functionality
+## Login System
+
+Users log in using their username and password.
+
+Successful login displays:
+
+> Welcome [First Name], [Last Name], it is great to see you again.
 
 ---
 
-## 🧪 Technologies Used
-- Java (JDK 23)
-- Apache NetBeans IDE 23
-- Maven
-- JUnit 5
-- Git & GitHub
+# 📨 Part 2 – Sending Messages
 
----
+## Welcome Menu
 
-## 📁 Project Structure
+After login, users can:
 
-src/
-├── main/java/com/mychatbot/quickchatapp
-│ ├── QuickChatApp.java
-│ ├── Login.java
-│
-├── test/java/com/mychatbot/quickchatapp
-│ ├── LoginTest.java
-
-
----
-
-## 👨‍💻 Author
-Student Project - POE Assignment  
-Developed using Java OOP principles and test-driven development.
-
----
-
-## 📌 Notes
-- This project follows clean code principles.
-- All validation logic is separated into reusable methods.
-- Unit tests ensure correctness of core functionality.
-
----
-
----
-
-# 📨 Part 2 — Sending Messages
-
-## Features Added
-
-### Welcome Menu
-After successful login, the application displays:
-
-- Welcome to QuickChat
-
-The user can then choose from the following options:
 1. Send Messages
-2. Show recently sent messages
+2. Show Sent Messages
 3. Quit
 
 ---
 
-## Message Functionality
+## Message Features
 
 Users can:
-- Enter how many messages they would like to send
-- Send messages
-- Disregard messages
-- Store messages for later
+
+* Specify how many messages they want to send.
+* Send messages.
+* Disregard messages.
+* Store messages for later.
 
 ---
 
-## Message Validation
+## Recipient Validation
 
-### Recipient Validation
 Recipient numbers must:
-- Include the international code (+27)
-- Follow the correct South African cell number format
 
-### Message Length Validation
+* Include +27.
+* Follow the correct South African format.
+
+---
+
+## Message Length Validation
+
 Messages may not exceed 250 characters.
 
-If the message exceeds the limit, the application displays:
-- "Message exceeds 250 characters by X"
+If exceeded, the application displays:
+
+> Message exceeds 250 characters by X
 
 ---
 
 ## Message Hash
 
-The system automatically generates a message hash using:
-- First 2 digits of Message ID
-- Message number
-- First and last words of the message
+The system generates a message hash using:
+
+* First two digits of Message ID
+* Message number
+* First word of message
+* Last word of message
 
 Example:
+
 00:0:HITONIGHT
 
 ---
 
 ## JSON Storage
-Messages selected for storage are saved into a JSON file:
-- storedMessages.json
+
+Stored messages are saved to:
+
+storedMessages.json
 
 ---
 
-## Unit Testing
-JUnit tests were added for:
-- Message length validation
-- Recipient validation
-- Message hash creation
-- Message sending options
-- Message ID generation
+# 📬 Part 3 – Message Management
+
+## Arrays
+
+The application maintains arrays for:
+
+* Sent messages
+* Stored messages
+* Disregarded messages
+* Message hashes
+* Message IDs
 
 ---
 
-## Concepts Demonstrated
-- Loops
-- Arrays
-- String manipulation
-- File handling
-- OOP principles
-- Validation logic
-- Unit testing
-- Git branching workflow
+## Longest Stored Message
+
+The application searches stored messages and displays the message with the greatest length.
+
+---
+
+## Search Message by ID
+
+Users can search for a message using its Message ID.
+
+The application displays:
+
+* Recipient
+* Message contents
+
+---
+
+## Search Messages by Recipient
+
+Users can enter a recipient number and display all messages sent to that recipient.
+
+---
+
+## Delete Message Using Message Hash
+
+Messages can be removed using their unique message hash.
+
+The system confirms successful deletion.
+
+---
+
+## Display Sender and Recipient
+
+The application displays:
+
+* Sender
+* Recipient
+
+for all stored messages.
+
+---
+
+## Message Reports
+
+Reports display:
+
+* Message Number
+* Message Hash
+* Recipient
+* Message Text
+
+---
+
+## Read JSON File
+
+Messages stored in:
+
+storedMessages.json
+
+can be read back into an array and displayed to the user.
+
+---
+
+# 🧪 Unit Testing
+
+JUnit 5 tests are included for:
+
+## Login Tests
+
+* Username validation
+* Password complexity
+* Cell number validation
+* Registration
+* Login
+
+## Message Tests
+
+* Message ID generation
+* Recipient validation
+* Message length validation
+* Message hash generation
+* Send message option
+* Store message option
+* Disregard message option
+
+## MessageManager Tests
+
+* Sent messages array
+* Longest stored message
+* Search message by ID
+* Search by recipient
+* Delete by hash
+* Display reports
+* Message hash array
+* Message ID array
+
+---
+
+# ⚙ Automated Testing
+
+GitHub Actions automatically runs Maven tests using:
+
+TestJava.yml
+
+All tests execute automatically whenever code is pushed to GitHub.
+
+---
+
+# 🛠 Technologies Used
+
+* Java JDK 23
+* Apache NetBeans IDE 23
+* Maven
+* JUnit 5
+* Git
+* GitHub
+* GitHub Actions
+
+---
+
+# 📁 Project Structure
+
+```
+src
+├── main
+│   └── java
+│       └── com.mychatbot.quickchatapp
+│           ├── Login.java
+│           ├── Message.java
+│           ├── MessageManager.java
+│           └── QuickChatApp.java
+│
+├── test
+│   └── java
+│       └── com.mychatbot.quickchatapp
+│           ├── LoginTest.java
+│           ├── MessageTest.java
+│           └── MessageManagerTest.java
+```
+
+---
+
+# 👨‍💻 Author
+
+Student Programming POE Assignment
+
+Developed using:
+
+* Object-Oriented Programming
+* Arrays
+* File Handling
+* Validation Logic
+* Unit Testing
+* Git Branching Workflow
+* Continuous Integration with GitHub Actions
+
+---
+
+# ✅ Concepts Demonstrated
+
+* Classes and Objects
+* Encapsulation
+* Arrays and ArrayLists
+* String Manipulation
+* File Handling
+* Exception Handling
+* Loops
+* Validation Logic
+* JSON Storage
+* Unit Testing
+* Continuous Integration
+* GitHub Workflow
