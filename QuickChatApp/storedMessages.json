@@ -4,3 +4,74 @@
 "recipient": "+27718693002",
 "message": "Please store this message."
 }
+{
+"messageID": "3447507905",
+"messageHash": "34:2:PLEASEMESSAGE",
+"recipient": "+27718693002",
+"message": "Please store this message."
+}
+{
+"messageID": "9541407914",
+"messageHash": "95:2:PLEASEMESSAGE",
+"recipient": "+27718693002",
+"message": "Please store this message."
+}
+{
+"messageID": "8044589703",
+"messageHash": "80:2:PLEASEMESSAGE",
+"recipient": "+27718693002",
+"message": "Please store this message."
+}
+{
+"messageID": "5746396745",
+"messageHash": "57:0:ITTIME",
+"recipient": "+27823451265",
+"message": "It is dinner time"
+}
+{
+"messageID": "5358796514",
+"messageHash": "53:2:PLEASEMESSAGE",
+"recipient": "+27718693002",
+"message": "Please store this message."
+}
+{
+"messageID": "1377938234",
+"messageHash": "13:0:ITTIME",
+"recipient": "+27723622893",
+"message": "It is dinner time"
+}
+{
+"messageID":"4692346603",
+"messageHash":"46:2:PLEASEMESSAGE",
+"sender":"Developer",
+"recipient":"+27718693002",
+"message":"Please store this message."
+}
+{
+"messageID":"8692890736",
+"messageHash":"86:2:PLEASEMESSAGE",
+"sender":"Developer",
+"recipient":"+27718693002",
+"message":"Please store this message."
+}
+{
+"messageID":"9127289523",
+"messageHash":"91:2:PLEASEMESSAGE",
+"sender":"Developer",
+"recipient":"+27718693002",
+"message":"Please store this message."
+}
+{
+"messageID":"8150843344",
+"messageHash":"81:0:ITTIME",
+"sender":"Developer",
+"recipient":"+27653451234",
+"message":"It is dinner time"
+}
+{
+"messageID":"0368981152",
+"messageHash":"03:0:ITTIME",
+"sender":"Developer",
+"recipient":"+27823560987",
+"message":"It is dinner time"
+}
